@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         纽约时报查看更多
 // @namespace    https://github.com/gui-ying233/MoreFreeNYT
-// @version      1.0.2
+// @version      1.0.3
 // @description  去除纽约时报的订阅提示并显示更多内容（不一定能完全显示）
 // @author       鬼影233
 // @license      MIT
@@ -39,7 +39,7 @@
 	document.head.appendChild(
 		Object.assign(document.createElement("style"), {
 			textContent:
-				"#gateway-content,div[id^=lire-ui]{display:none}.vi-gateway-container{position:initial!important}",
+				'#gateway-content,div[id^=lire-ui],#body-container>div[data-testid="onsite-messaging-unit-athleticGateway"]{display:none}body,.vi-gateway-container{position:initial!important}',
 		})
 	);
 })();
